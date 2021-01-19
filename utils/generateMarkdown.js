@@ -27,9 +27,8 @@ const renderLicenseSection = license => {
 		return "";
 	}
 	else {
-	return `
-	## License
-	${license}
+	return `## License
+${license}
 	`
 	}
 }
@@ -40,16 +39,14 @@ function generateMarkdown(data) {
 	const renderLink = renderLicenseLink(data.license);
 	const renderSection = renderLicenseSection(data.license);
 	return `# ${data.title}
-	
-	${renderShield}${renderLink}
-	​
-## Description
-	​
-	${data.description}
 
-​
+${renderShield}${renderLink}
+
+## Description
+
+${data.description}
+
 ## Table of Contents 
-​
 * [Installation](#installation)
 ​
 * [Usage](#usage)
@@ -63,16 +60,17 @@ function generateMarkdown(data) {
 * [Questions](#questions)
 ​
 ## Installation
-​
-To install necessary dependencies, run the following command:
-​    ${data.installation}
-​
+
+​To install necessary dependecies please use the following commands:
+
+	${data.installation}
+	
 ## Usage
 ​
 ${data.usage}
 ​​
 ${renderSection}
-  
+
 ## Contributing
 ​
 ${data.contributing}
@@ -81,10 +79,9 @@ ${data.contributing}
 ​
 ${data.test}
 
-​
 ## Questions
 ​
-If you have any questions, comments, or concerns please feel free to contact me at castroal96@gmail.com 
+If you have any questions, comments, or concerns please feel free to contact me at ${data.email} or on Github: [${data.github}](https://github.com/${data.github}).
 
 `
 }
