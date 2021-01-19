@@ -1,10 +1,13 @@
-# readme
+# Readme Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Preview
+[Watch the video](https://drive.google.com/file/d/1thS_O4BDxT4o-sMOCkdxQ4q_X7Yt5waR/preview)
+
 ## Description
 
-lkajsd;lfkjasd
+The purpose of this project was to use node.js in order to create a quick template for future readme markdowns. We used node.js in conjuction with npm inquirer to achieve the template generator. The purpose of creating a readme generator is for efficiency purposes and reducing the amount of time when creating readme for future endeavors. 
 
 ## Table of Contents 
 * [Installation](#installation)
@@ -27,7 +30,7 @@ lkajsd;lfkjasd
 	
 ## Usage
 ​
-nothing
+N/A
 ​​
 ## License
 MIT
@@ -35,11 +38,11 @@ MIT
 
 ## Contributing
 ​
-nada
+You may not contribute to the repo at this time.
 ​
 ## Tests
 ​
-test
+none
 
 ## Questions
 ​

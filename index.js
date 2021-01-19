@@ -56,7 +56,7 @@ const questions = [{
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
-	fs.writeFile("readme.md", data, (err) => {
+	fs.writeFile("examplereadme.md", data, (err) => {
 		if (err) throw err;
 		console.log('commit logged!');
 })
