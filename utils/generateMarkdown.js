@@ -1,4 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+
+const inquirer = require("inquirer");
+
 // If there is no license, return an empty string
 const renderLicenseBadge = license => {
 	if (license === "MIT") return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
@@ -33,25 +36,57 @@ const renderLicenseSection = license => {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-	const badge = renderLicenseBadge(data.license);
-	const link = renderLicenseLink(data.license);
-	const render = renderLicenseSection(data.license);
-	const bodyReadme = `# ${data.title}
-${badge}${link}
-
-
-## Description
-${data.description}
-  
-  
-## Usage
-${data.usage}
-
-
+	const renderShield = renderLicenseBadge(data.license);
+	const renderLink = renderLicenseLink(data.license);
+	const renderSection = renderLicenseSection(data.license);
+	return `# ${data.title}
 	
-`
+	${renderShield}${renderLink}
+	​
+## Description
+	​
+	${data.description}
 
-  return bodyReadme;
+​
+## Table of Contents 
+​
+* [Installation](#installation)
+​
+* [Usage](#usage)
+​
+* [License](#license)
+​
+* [Contributing](#contributing)
+​
+* [Tests](#tests)
+​
+* [Questions](#questions)
+​
+## Installation
+​
+To install necessary dependencies, run the following command:
+​    ${data.installation}
+​
+## Usage
+​
+${data.usage}
+​​
+${renderSection}
+  
+## Contributing
+​
+${data.contributing}
+​
+## Tests
+​
+${data.test}
+
+​
+## Questions
+​
+If you have any questions, comments, or concerns please feel free to contact me at castroal96@gmail.com 
+
+`
 }
 
 module.exports = generateMarkdown;
